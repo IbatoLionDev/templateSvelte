@@ -1,0 +1,58 @@
+@import url('/bootstrap/bootstrap.min.css');
+:root {
+  --light-gray: #262833;
+  --dark-blue: #172DA6;
+  --light-blue: #4154BF;
+  --dark-gray: #222740;
+  --gray: #2C2D33;
+  --blue-gradiant: linear-gradient(to right, var(--dark-blue), var(--light-blue)) !important;
+}
+
+body {
+  background: #FAF8F2;
+}
+
+.border-primary{
+  border-color: var(--dark-blue) !important;
+}
+.navbar,
+.dropdown-menu {
+  background: var(--blue-gradiant);
+}
+
+.nav-link,
+.dropdown-item {
+  color: white;
+}
+
+.nav-link:hover,
+.dropdown-item:hover {
+  color: var(--light-gray) !important;
+}
+
+.text-primary {
+  color: var(--light-blue) !important;
+}
+
+.card,
+.card-body {
+  border-radius: 20px;
+}
+
+.card-body {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary {
+  background: var(--dark-blue);
+}
+
+.btn-primary:hover,
+.dropdown-item:hover {
+  background: var(--light-blue);
+}
