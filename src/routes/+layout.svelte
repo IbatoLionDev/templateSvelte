@@ -2,6 +2,7 @@
 	import "./styles.scss";
 	import { onMount } from "svelte";
 	import {changeTheme} from "$lib/utilities/theme.js"
+    import Notification from "$lib/components/notification/notification.svelte";
 	let theme = "light";
 	
 	onMount(() => {
@@ -11,3 +12,4 @@
 </script>
 
 <slot />
+<Notification/>

@@ -80,7 +80,11 @@ $theme-colors: (
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
+.animationStart{
+  animation: startIcon 1s forwards;
+  animation-fill-mode: both;
 
+}
 
 @keyframes cardAnimation {
   0% {
@@ -89,5 +93,18 @@ $theme-colors: (
 
   100% {
     opacity: 100;
+  }
+}
+@keyframes startIcon{
+  0%{
+    transform: translateY(100%);
+    opacity: 0;
+
+  }
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+
+
   }
 }
