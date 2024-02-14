@@ -31,7 +31,7 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav me-auto mb-lg-0" />
-				<form class="d-flex">
+				<div class="d-flex">
 					<ul class="navbar-nav me-auto align-items-center mb-lg-0">
 						<li class="nav-item me-3">
 							<!-- svelte-ignore a11y-missing-attribute -->
@@ -75,7 +75,7 @@
 							</ul>
 						</li>
 					</ul>
-				</form>
+				</div>
 			</div>
 		</div>
 	</nav>
