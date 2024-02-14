@@ -3,7 +3,7 @@
 	export let isOpen = false;
 	import { fade } from "svelte/transition";
 	import { createEventDispatcher } from 'svelte';
-    import { fromDataToJson } from "$lib/utilities/fromData";
+    import { formToJson } from "$lib/utilities/fromData";
     import { Api } from "$lib/utilities/api";
 
 	export let id
@@ -24,7 +24,7 @@ const dispatch = createEventDispatcher();
 	});
 	
 	async function submit(event) {
-		const formData = fromDataToJson(new FormData(event.target))  ;
+		const formData = formToJson(new FormData(event.target))  ;
 		
 		 await Api(`${endpoint}${id}`, method, formData);
 		modal.hide()

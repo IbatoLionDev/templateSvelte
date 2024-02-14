@@ -1,14 +1,24 @@
-export function fromDataToJson(formData) {
+export function formToJson(form) {
     let jsonObject = {};
 
-    for (const [key, value] of formData.entries()) {
-        // Comprueba si el valor es numérico
-        if (!isNaN(value)) {
-            // Convierte el valor a un número antes de agregarlo al objeto JSON
-            jsonObject[key] = Number(value);
-        } else {
-            jsonObject[key] = value;
+    // Itera sobre todos los elementos del formulario
+    for (let element of form.elements) {
+        // Solo procesa los elementos con nombre
+        if (element.name) {
+            // Trata los elementos de tipo 'checkbox' de manera especial
+            if (element.type === 'checkbox') {
+                jsonObject[element.name] = element.checked;
+            } 
+            // Si el elemento es de tipo 'number', convierte el valor a un número
+            else if (element.type === 'number') {
+                jsonObject[element.name] = Number(element.value);
+            } 
+            // Para todos los demás tipos de elementos, simplemente guarda el valor
+            else {
+                jsonObject[element.name] = element.value;
+            }
         }
     }
+
     return jsonObject;
 }

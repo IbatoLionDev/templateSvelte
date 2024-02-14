@@ -3,7 +3,7 @@
 	import { Api } from "$lib/utilities/api.js";
 	import { setRole, setToken } from "$lib/utilities/cookies.js";
 
-	import {fromDataToJson} from "$lib/utilities/fromData.js"
+	import {formToJson} from "$lib/utilities/fromData.js"
 	export let btnName;
 	export let title;
 	export let switchView;
@@ -11,7 +11,7 @@
 	export let endpoint;
 
 	async function submit(event) {
-		const formData = fromDataToJson(new FormData(event.target))  ;
+		const formData = formToJson(event.target)  ;
 		
 		const response = await Api(endpoint, method, formData);
 		setToken(response.token)

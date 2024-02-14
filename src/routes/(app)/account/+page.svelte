@@ -2,7 +2,7 @@
 	import DeleteButton from "$lib/components/buttons/deleteButton.svelte";
 	import { Api } from "$lib/utilities/api";
 	import { goto } from "$app/navigation";
-    import { fromDataToJson } from "$lib/utilities/fromData";
+    import { formToJson } from "$lib/utilities/fromData";
 
 	async function deleteUser() {
 		await Api("users/token", "DELETE");
@@ -10,7 +10,7 @@
 	}
 
 	async function submit(event) {
-		const formData = fromDataToJson(new FormData(event.target));
+		const formData = formToJson(new FormData(event.target));
 		await Api("users/token", "PUT", formData);
 		goto("/home");
 	}
