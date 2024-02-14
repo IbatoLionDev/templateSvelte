@@ -24,7 +24,7 @@ const dispatch = createEventDispatcher();
 	});
 	
 	async function submit(event) {
-		const formData = formToJson(new FormData(event.target))  ;
+		const formData = formToJson(event.target)  ;
 		
 		 await Api(`${endpoint}${id}`, method, formData);
 		modal.hide()

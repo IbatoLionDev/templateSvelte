@@ -10,7 +10,7 @@
 	}
 
 	async function submit(event) {
-		const formData = formToJson(new FormData(event.target));
+		const formData = formToJson(event.target);
 		await Api("users/token", "PUT", formData);
 		goto("/home");
 	}

@@ -5,7 +5,7 @@ const urlBase = import.meta.env.VITE_API_URL
 
 export async function Api(url, method = "GET", data) {
 	console.log("Fetch a " + urlBase + url);
-	console.log(data);
+	console.log(url);
 	const response = await fetch(urlBase + url, {
 		method: method,
 		headers: {
