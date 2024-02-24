@@ -1,0 +1,49 @@
+@import "../../../static/bootstrap/scss/functions";
+@import "../../../static/bootstrap/scss/variables";
+@import "../../../static/bootstrap/scss/mixins";
+
+// Monocromatic colors
+$primary: #172DA6;
+$secondary : #262833;
+$primary-ligth: #4154BF;
+$secondary-light : #222740;
+$secondary-dark : #2C2D33;
+
+// Colores predeterminados de Bootstrap
+$success: #198754;
+$danger: #dc3545;
+$info: #0dcaf0;
+$warning: #ffc107;
+$light: #f8f9fa;
+$dark: #343a40;
+
+//Gradiant colors
+$primary-gradiant: linear-gradient(to right, $primary, $primary-ligth);
+
+// OverWritte colors
+$body-bg: #FAF8F2;
+
+// Create bootstrap class Colors
+$custom-colors: (
+  "primary-ligth": $primary-ligth,
+  "secondary-light": $secondary-light,
+  "secondary-dark": $secondary-dark,
+  
+);
+
+// Merge 
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+
+// Overwritte bootstrap class colors
+$theme-colors: (
+  "primary": $primary,
+  "secondary" : $secondary,
+  "success": $success,
+  "danger": $danger,
+  "warning": $warning,
+  "info": $info,
+  "light": $light,
+  "dark": $dark
+);
+@import "../../../static/bootstrap/scss/bootstrap.scss";

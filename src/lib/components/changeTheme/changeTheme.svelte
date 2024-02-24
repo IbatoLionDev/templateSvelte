@@ -12,7 +12,7 @@
         themeName = localStorage.getItem("theme") || "light";
         if (themeName == "dark") themePath =  mdiWeatherNight
     })
-    function changeTeme() {
+    function changeThemeFunction() {
         if (themePath == mdiWeatherSunny) {
             themePath = mdiWeatherNight;
             changeTheme("dark");
@@ -24,7 +24,7 @@
 </script>
 
 <button
-    on:click={changeTeme}
+    on:click={changeThemeFunction}
     class="btn btn-link text-decoration-none p-0 m-0 border-0 bg-transparent"
 >
     {#key themePath}
