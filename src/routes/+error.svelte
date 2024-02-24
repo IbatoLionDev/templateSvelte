@@ -97,5 +97,4 @@
     .slide-in-from-right {
         animation: slide-in-from-right 0.5s ease-out;
     }
-    body{overflow: hidden;}
 </style>
