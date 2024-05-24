@@ -1,9 +1,23 @@
-<div class="card">
+<script>
+ 
+    import ConfirmModal from "$lib/components/modals/confirmModal.svelte";
+import { _ } from "svelte-i18n";
+	const object = {
+		dog: "jorge",
+		cat: "michi"
+	}
+	object.map((item)=>{
+		console.log(item)
+	})
+	
+</script>
+
+<div  class="card  ">
 	<div class="card-body p-5">
-		<h1 class="mx-auto text-primary mb-5 text-center font-weight-bold">Welcome</h1>
+		<h1 class="mx-auto text-primary mb-5 text-center font-weight-bold">{$_("home.title")}</h1>
 		<div class="row">
 			<div class="col-12 col-sm-4">
-				<p>
+				<p >
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod ultrices massa, et
 					feugiat ipsum consequat id. Vestibulum ante ipsum primis in faucibus orci luctus et
 					ultrices posuere cubilia curae; Sed at condimentum metus, vitae fringilla tortor.
@@ -27,9 +41,9 @@
 	</div>
 </div>
 
-
 <style>
 	p {
+		
 		text-align: center;
 	}
 </style>

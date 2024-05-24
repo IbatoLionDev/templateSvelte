@@ -1,0 +1,33 @@
+$step: 5;
+$limit: 20;
+$breakpoints: (
+  '': 0,
+  'sm': 576px,
+  'md': 768px,
+  'lg': 992px,
+  'xl': 1200px,
+  'xxl': 1400px
+);
+// genera clases que van desde los 0% hasta 100% en pasos de 5% (f-0-0-0, f-xs-1-0-5, ..., f-xxl-2-2-100)
+
+@for $i from 0 through $limit {
+  @for $j from 0 through 2 {
+    @for $k from 0 through 2 {
+      @each $breakpoint, $min-width in $breakpoints {
+        @if $breakpoint == '' {
+          .f-#{$j}-#{$k}-#{$step*$i} {
+            flex: #{$j} #{$k} #{$step*$i+"%"};
+            max-width: #{$step*$i+"%"};
+          }
+        } @else {
+          @media (min-width: $min-width) {
+            .f-#{$breakpoint}-#{$j}-#{$k}-#{$step*$i} {
+              flex: #{$j} #{$k} #{$step*$i+"%"};
+              max-width: #{$step*$i+"%"};
+            }
+          }
+        }
+      }
+    }
+  }
+}

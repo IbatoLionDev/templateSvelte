@@ -16,16 +16,14 @@
   background: $primary-ligth;
 }
 
-.card,
-.card-body {
+.card{
   border-radius: 20px;
   animation: cardAnimation 0.5s forwards;
-}
-
-.card-body {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
 }
+
+
 
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
@@ -34,5 +32,27 @@
   animation: startIcon 1s forwards;
   animation-fill-mode: both;
 
+}
+
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
+*{
+  box-sizing: border-box;
+  position: relative;
+  min-width: 0
+}
+
+body{
+  min-height: 100dvh;
+}
+h1, h2, h3, h4{
+  text-wrap: balance;
+  margin-bottom: 0;
+}
+
+p{
+  text-wrap: pretty;
 }
 

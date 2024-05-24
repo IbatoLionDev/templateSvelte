@@ -3,6 +3,7 @@
 	import { onMount } from "svelte";
 	import {changeTheme} from "$lib/utilities/theme.js"
     import Notification from "$lib/components/notification/notification.svelte";
+	import "$lib/translate/i18n"
 	let theme = "light";
 	
 	onMount(() => {

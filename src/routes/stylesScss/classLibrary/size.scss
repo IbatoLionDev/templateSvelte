@@ -1,0 +1,24 @@
+$step: 25px;
+$limit: 40;
+// genera clases que van desde los 0 hasta 1000px en pasos de 25 (mw-25px, h-50px, mnw-425px)
+//mw => max-width,mh => max-height, h => height, w => width, mnw => min-width, mnh => min-height
+@for $i from 0 through $limit {
+  .mw-#{$step*$i} {
+    max-width: #{$step*$i} !important;
+  }
+  .mh-#{$step*$i} {
+    max-height: #{$step*$i} !important;
+  }
+  .w-#{$step*$i} {
+    width: #{$step*$i} !important;
+  }
+  .h-#{$step*$i} {
+    height: #{$step*$i} !important;
+  }
+  .mnw-#{$step*$i} {
+    min-width: #{$step*$i} !important;
+  }
+  .mnh-#{$step*$i} {
+    min-height: #{$step*$i} !important;
+  }
+}

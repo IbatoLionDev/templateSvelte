@@ -28,15 +28,10 @@ $custom-colors: (
   "primary-ligth": $primary-ligth,
   "secondary-light": $secondary-light,
   "secondary-dark": $secondary-dark,
-  
 );
 
-// Merge 
-$theme-colors: map-merge($theme-colors, $custom-colors);
-
-
-// Overwritte bootstrap class colors
-$theme-colors: (
+// Define the default Bootstrap theme colors
+$default-theme-colors: (
   "primary": $primary,
   "secondary" : $secondary,
   "success": $success,
@@ -46,4 +41,8 @@ $theme-colors: (
   "light": $light,
   "dark": $dark
 );
+
+// Merge the default theme colors and your custom colors
+$theme-colors: map-merge($default-theme-colors, $custom-colors);
+
 @import "../../../static/bootstrap/scss/bootstrap.scss";

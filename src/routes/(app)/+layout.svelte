@@ -5,7 +5,7 @@
 	import { goto } from "$app/navigation";
 
 	onMount(()=>{
-	if(!getToken()) goto("/login")	
+	//if(!getToken()) goto("/login")	
 	})
 </script>
 
